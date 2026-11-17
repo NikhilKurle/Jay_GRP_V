@@ -444,7 +444,7 @@ export const LEGACY = {
 // ── Leadership ───────────────────────────────────────────────
 export const FOUNDER = {
   eyebrow: 'THE VISION BEHIND JAY GROUP',
-  name: 'Mr. Jayant Hole-Patil',
+  name: 'Mr. Jayant Holeypatil',
   title: 'Founder & Managing Director',
   quote: '"A business is not defined by how it begins, but by how well it continues."',
   body: 'He started in electrical contracting. Today he leads a group across real estate, construction and more, built on one belief: businesses should be sustainable, professionally run and valuable to Solapur for decades.',
