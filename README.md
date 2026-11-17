@@ -54,11 +54,11 @@ Then point the domain (jaygrp.com) to the host from your domain provider's DNS s
 
 ## Enquiry forms
 
-All forms (enquiry, project enquiry, contracting, brochure download, newsletter) are emailed to **contact@jaygrp.in** through Web3Forms (free).
+All forms (enquiry, project enquiry, contracting, brochure download, newsletter) are emailed to **contact@jaygrp.com** through Web3Forms (free).
 
 One-time setup:
-1. Go to **web3forms.com**, enter `contact@jaygrp.in` and click *Create Access Key*.
-2. The key arrives at contact@jaygrp.in. Open `src/data/site.js`, find `FORMS`, and paste it: `web3formsKey: 'your-key-here',`
+1. Go to **web3forms.com**, enter `contact@jaygrp.com` and click *Create Access Key*.
+2. The key arrives at contact@jaygrp.com. Open `src/data/site.js`, find `FORMS`, and paste it: `web3formsKey: 'your-key-here',`
 3. Run `npm run build` and upload the new `dist`.
 
 Each email has a clear subject, e.g. *"Brochure download: The Eastern One · Name"*, with name, phone, email, enquiry type, message and the page it came from. Replying to the email replies to the visitor (when they gave an email). A hidden spam trap filters out bots. If sending ever fails, the visitor sees a message asking them to call. Brochures still download either way.

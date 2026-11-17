@@ -74,7 +74,7 @@ import jvvLayout from '../assets/projects/jvv-layout.webp';
 // using that email address, paste it below, then run `npm run build` again.
 // Until a key is set, forms open the visitor's email app addressed to FORMS.to.
 export const FORMS = {
-  to: 'contact@jaygrp.in',
+  to: 'contact@jaygrp.com',
   web3formsKey: '',
 };
 
