@@ -69,7 +69,7 @@ To send enquiries to a different address, change `to` in `FORMS` and create a ke
 
 ## Before / soon after going live
 
-- [ ] **Add the Web3Forms key** (see "Enquiry forms" below). Until then, forms open the visitor's email app instead of sending directly.
+- [ ] **Add the Web3Forms key** (see "Enquiry forms" above). Until then, forms open the visitor's email app instead of sending directly.
 - [ ] **Privacy Policy and Terms & Conditions pages.** The footer links exist but go nowhere yet.
 - [ ] **MahaRERA numbers** for The Eastern One and Jay Vijay Vihar were removed on request. Ongoing projects generally must show them; confirm with legal.
 - [ ] Jay Plaza: flat types and sizes. Prajay Heights / JV Square / Jayendra Arcade: sizes.
