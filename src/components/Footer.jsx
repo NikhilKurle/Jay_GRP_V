@@ -5,14 +5,22 @@ import logo from '../assets/logo/jayGRPLogo.svg';
 import mediahausLogo from '../assets/logo/mediahaus.png';
 import { MEGA_MENU, FOOTER, CONTACT } from '../data/site';
 import { submitLead } from '../lib/leads';
+import { SendError } from './Forms';
 
 const Footer = () => {
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState(false);
 
   const subscribe = async (e) => {
     e.preventDefault();
-    await submitLead('newsletter', { email: new FormData(e.target).get('email') });
-    setSent(true);
+    const f = new FormData(e.target);
+    setError(false);
+    try {
+      await submitLead('newsletter', { email: f.get('email'), botcheck: f.get('botcheck') });
+      setSent(true);
+    } catch {
+      setError(true);
+    }
   };
 
   return (
@@ -30,9 +38,11 @@ const Footer = () => {
             ) : (
               <div className="news-row">
                 <input type="email" name="email" required placeholder="Email address" aria-label="Email address" />
+                <input type="checkbox" name="botcheck" className="hp" tabIndex={-1} autoComplete="off" aria-hidden="true" />
                 <button className="btn btn-gold" type="submit">Subscribe</button>
               </div>
             )}
+            {error && <SendError />}
           </form>
         </div>
 

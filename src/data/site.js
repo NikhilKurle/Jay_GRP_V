@@ -68,6 +68,16 @@ import jvvLayout from '../assets/projects/jvv-layout.webp';
 
 
 // Contact details: fill these in and every Call / WhatsApp button updates.
+// ── Form delivery ────────────────────────────────────────────
+// Every enquiry, brochure download, contact and newsletter form is emailed to
+// FORMS.to through Web3Forms (free). Create an access key at web3forms.com
+// using that email address, paste it below, then run `npm run build` again.
+// Until a key is set, forms open the visitor's email app addressed to FORMS.to.
+export const FORMS = {
+  to: 'contact@jaygrp.in',
+  web3formsKey: '',
+};
+
 // Phone in international format without "+" or spaces, e.g. "919876543210".
 // Numbers and email from the Jay Vijay Vihar brochure.
 export const CONTACT = {

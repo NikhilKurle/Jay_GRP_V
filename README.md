@@ -48,13 +48,28 @@ Then point the domain (jaygrp.com) to the host from your domain provider's DNS s
 | `src/components/` | Shared parts: top bar, footer, forms, intro animation, cards |
 | `src/assets/` | Logos, project images, videos |
 | `public/` | Files copied as-is: brochures, icons, share image, hosting rules |
-| `src/lib/leads.js` | Where enquiry forms send their data (see below) |
+| `src/lib/leads.js` | Sends form enquiries by email (see below) |
+
+---
+
+## Enquiry forms
+
+All forms (enquiry, project enquiry, contracting, brochure download, newsletter) are emailed to **contact@jaygrp.in** through Web3Forms (free).
+
+One-time setup:
+1. Go to **web3forms.com**, enter `contact@jaygrp.in` and click *Create Access Key*.
+2. The key arrives at contact@jaygrp.in. Open `src/data/site.js`, find `FORMS`, and paste it: `web3formsKey: 'your-key-here',`
+3. Run `npm run build` and upload the new `dist`.
+
+Each email has a clear subject, e.g. *"Brochure download: The Eastern One · Name"*, with name, phone, email, enquiry type, message and the page it came from. Replying to the email replies to the visitor (when they gave an email). A hidden spam trap filters out bots. If sending ever fails, the visitor sees a message asking them to call. Brochures still download either way.
+
+To send enquiries to a different address, change `to` in `FORMS` and create a key for that address.
 
 ---
 
 ## Before / soon after going live
 
-- [ ] **Connect the forms.** Enquiry, brochure, newsletter and contact forms currently do **not** send anywhere (they only log in the browser). Connect `src/lib/leads.js` to email, Google Sheets or a CRM, otherwise enquiries are lost.
+- [ ] **Add the Web3Forms key** (see "Enquiry forms" below). Until then, forms open the visitor's email app instead of sending directly.
 - [ ] **Privacy Policy and Terms & Conditions pages.** The footer links exist but go nowhere yet.
 - [ ] **MahaRERA numbers** for The Eastern One and Jay Vijay Vihar were removed on request. Ongoing projects generally must show them; confirm with legal.
 - [ ] Jay Plaza: flat types and sizes. Prajay Heights / JV Square / Jayendra Arcade: sizes.
